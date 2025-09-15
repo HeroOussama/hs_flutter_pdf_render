@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:8.12.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -44,10 +44,14 @@ android {
     }
     defaultConfig {
         minSdkVersion 21
+        ndk {
+            abiFilters "arm64-v8a", "armeabi-v7a"
+        }
     }
     lintOptions {
         disable 'InvalidPackage'
     }
+    ndkVersion '27.3.13750724'
 }
 
 dependencies {
