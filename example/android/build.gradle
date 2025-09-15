@@ -19,10 +19,6 @@ allprojects {
 }
 
 rootProject.buildDir = '../build'
-
-android {
-    namespace 'jp.espresso3389.pdf_render'
-}
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
